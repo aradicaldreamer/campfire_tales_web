@@ -6,7 +6,7 @@ var f;
 var r; 
 
 function preload() {
-    f = loadFont("Arial.ttf");
+    f = loadFont("assets/Arial.ttf");
 }
 
 function setup () {
