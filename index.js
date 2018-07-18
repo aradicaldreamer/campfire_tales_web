@@ -1,26 +1,29 @@
 // The message to be displayed
-var message = "       Campfire Tales - Coming this September!";
+var message = "Campfire Tales - September 2018!";
 
 var f;
 // The radius of a circle
 var r; 
+
+var bg;
 
 function preload() {
     f = loadFont("assets/Arial.ttf");
 }
 
 function setup () {
+  bg = loadImage("assets/bonfire-night-forest-vector-large.png")
   createCanvas(windowWidth, windowHeight);
   textFont(f);
-  textSize(40);
+  textSize(60);
   // The text must be centered!
   textAlign(CENTER);
   smooth();
 }
 
 function draw () {
-  // background(255);
-  r = windowWidth * .4;
+  background(bg);
+  r = windowHeight * .4;
 
   // Start in the center and draw the circle
   translate(width / 2, height / 2);
@@ -51,10 +54,14 @@ function draw () {
     // Rotate the box
     rotate(theta+PI/2); // rotation is offset by 90 degrees
     // Display the character
-    fill(0);
+    fill(255);
     text(currentChar,0,0);
     pop();
     // Move halfway again
     arclength += w/2;
+  }
+
+  function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
   }
 }
