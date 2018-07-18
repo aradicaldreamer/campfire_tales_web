@@ -1,10 +1,10 @@
 body {
-    background-image: url("assets/bonfire-night-forest-vector-large.png");
-    max-width: 100%;
-    max-height: 100%;
-    /* -webkit-background-size: cover;
+    background-image: url("assets/campfire.png");
+    /* max-width: 100%;
+    max-height: 100%; */
+    -webkit-background-size: cover;
     -moz-background-size: cover;
-    -o-background-size: cover; */
+    -o-background-size: cover;
     background-size: cover;
     background-repeat: no-repeat;
 }
