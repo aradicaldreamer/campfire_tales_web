@@ -1,36 +1,39 @@
 // The message to be displayed
-var message = "text along a curve";
+var message = "       Campfire Tales - Coming this September!";
 
 var f;
 // The radius of a circle
-var r = 100.0;
+var r; 
 
 function preload() {
-    f = loadFont("Georgia",40,true);
+    f = loadFont("Arial.ttf");
 }
 
 function setup () {
-  createCanvas(320, 320);
+  createCanvas(windowWidth, windowHeight);
   textFont(f);
+  textSize(40);
   // The text must be centered!
   textAlign(CENTER);
   smooth();
 }
 
 function draw () {
-  background(255);
+  // background(255);
+  r = windowWidth * .4;
 
   // Start in the center and draw the circle
   translate(width / 2, height / 2);
   noFill();
-  stroke(0);
+  noStroke();
   ellipse(0, 0, r*2, r*2);
+  stroke(255);
 
   // We must keep track of our position along the curve
   var arclength = 0.0;
 
   // For every box
-  for (var i = 0; i < message.length(); i++)
+  for (var i = 0; i < message.length; i++)
   {
     // Instead of a constant width, we check the width of each character.
     var currentChar = message.charAt(i);
@@ -42,7 +45,7 @@ function draw () {
     // Starting on the left side of the circle by adding PI
     var theta = PI + arclength / r;    
 
-    pushMatrix();
+    push();
     // Polar to cartesian coordinate conversion
     translate(r*cos(theta), r*sin(theta));
     // Rotate the box
@@ -50,7 +53,7 @@ function draw () {
     // Display the character
     fill(0);
     text(currentChar,0,0);
-    popMatrix();
+    pop();
     // Move halfway again
     arclength += w/2;
   }
