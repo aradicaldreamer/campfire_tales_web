@@ -1,13 +1,14 @@
-/* body {
-    background-image: url("assets/campfire.png");
+body {
+    /* background-image: url("assets/campfire.png");
     max-width: 100%;
     max-height: 100%;
     -webkit-background-size: contain;
     -moz-background-size: contain;
     -o-background-size: contain;
     background-size: contain;
-    background-repeat: no-repeat;
-} */
+    background-repeat: no-repeat; */
+    background-color:#838383;
+}
 
 img.background {
     width: 100%;
@@ -30,11 +31,13 @@ img.background {
   /*Social Media Icons*/
   .social-wrapper {
       text-align: center;
+      margin-right: 30px;
   }
   
   .social-wrapper ul li {
-      display: inline;
-      margin: 0 5px;
+      display: inline-block;
+      margin: 0 5px ;
+      padding-right: 10px;
   }
   
   .twitter-icon,
@@ -48,7 +51,7 @@ img.background {
       margin-top: .625em;
       width: 40px;
       height: 40px;
-      opacity: .6;
+      opacity: .7;
       filter: alpha(opacity=60); /* For IE8 and earlier */
     border-radius: 25px;
   }
